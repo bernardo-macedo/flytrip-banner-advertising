@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+input,
+textarea {
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}
+
+form {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* Custom CSS */
+body {
+  font-family: "Noto Sans", sans-serif;
+}
+h1 {
+  color: #293877;
+}
+
+header {
+  width: 1000px;
+  height: 500px;
+  padding: 2rem;
+  margin-inline: auto;
+  background: center / cover no-repeat url(img/portugal.jpg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 150px;
+}
+
+.is-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+}
+
+.card > img {
+  height: 100px;
+  object-fit: cover;
+}
+
+.card > div {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #293877;
+  color: #fff;
+}
+
+.btn {
+  padding: 0.7rem 1rem;
+  background-color: #293877;
+  color: #fff;
+}
+
+.btn:hover {
+  background-color: #3953bb;
+}
+
+.active {
+  border: 4px solid #fff;
+}
+
+.animation {
+  animation: opacity-animation 1s forwards;
+  -webkit-animation: opacity-animation 1s forwards;
+}
+
+@keyframes opacity-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1000px) {
+  header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem;
+  }
+  .logo {
+    width: 100px;
+  }
+  .is-grid {
+    gap: 0.5rem;
+  }
+  .card {
+    font-size: 0.8rem;
+  }
+}
